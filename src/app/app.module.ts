@@ -8,6 +8,7 @@ import { ListaProvasComponent } from './lista-provas/lista-provas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProvaComponent } from './prova/prova.component';
 import { QuestaoComponent } from './questao/questao.component';
+import { ChangeBgDirective } from './change-bg.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { QuestaoComponent } from './questao/questao.component';
     BoasVindasComponent,
     ListaProvasComponent,
     ProvaComponent,
-    QuestaoComponent
+    QuestaoComponent,
+    ChangeBgDirective
   ],
   imports: [
     BrowserModule,

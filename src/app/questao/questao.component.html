@@ -15,7 +15,7 @@
           <!-- alternativas -->
           <div class="container my-5">
             <div class="row d-flex align-items-center">
-              <div
+              <!-- <div
                 class="card col-md-12 d-flex align-items-strech m-1 my-1 p-0"
                 *ngFor="let alternativa of questao.alternativas"
               >
@@ -26,7 +26,21 @@
                     <p class="card-text">{{ alternativa?.isResposta }}</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
+
+              <div >
+                <div
+                class="card col-md-12 d-flex align-items-strech m-1 my-1 p-0" *ngFor="let option of questao.alternativas">
+                    <div appChangeBg [isCorrect]="option.isResposta" class="card-body" >
+                        <div  class="card-text">
+                            {{option.texto}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
             </div>
           </div>
 
