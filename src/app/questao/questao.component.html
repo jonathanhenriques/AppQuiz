@@ -1,0 +1,38 @@
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center">
+    <div
+      class="card col-md-12 d-flex align-items-strech m-1 my-1 p-0"
+      *ngFor="let questao of listaQuestoes"
+    >
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title texto">{{ questao?.texto }}</h5>
+          <p class="card-text">{{ questao?.dificuldade }}</p>
+          <p class="card-text">{{ questao?.id }}</p>
+
+
+          <!-- alternativas -->
+          <div class="container my-5">
+            <div class="row d-flex align-items-center">
+              <div
+                class="card col-md-12 d-flex align-items-strech m-1 my-1 p-0"
+                *ngFor="let alternativa of questao.alternativas"
+              >
+                <div class="card">
+                  <div class="card-body "  >
+                    <h5 class="card-title texto">{{ alternativa?.id }}</h5>
+                    <p class="card-text">{{ alternativa?.texto }}</p>
+                    <p class="card-text">{{ alternativa?.isResposta }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>

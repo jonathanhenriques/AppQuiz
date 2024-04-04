@@ -5,7 +5,7 @@ export interface Prova {
   descricao?: string
   duracao?: number
   usuario?: Usuario
-  questoes?: Questao[]
+  questoes: Questao[]
   instituicao?: string
   categoria?: CategoriaProva
 }
